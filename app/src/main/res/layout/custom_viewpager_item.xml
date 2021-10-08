@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="30"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20">
+
+        <RelativeLayout
+            android:id="@+id/rell"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/abc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/roboto"
+                android:text="Look around, "
+                android:textColor="@color/black"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:id="@+id/abc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_toRightOf="@id/abc1"
+                android:fontFamily="@font/roboto"
+                android:paddingLeft="1dp"
+                android:text="you and observe"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/abc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@+id/abc2"
+                android:fontFamily="@font/roboto"
+                android:text=" you will"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:id="@+id/abc4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/abc2"
+
+                android:layout_marginTop="-2dp"
+                android:fitsSystemWindows="true"
+                android:fontFamily="@font/roboto"
+                android:text="be able to identify many types of resources."
+                android:textSize="16sp"></TextView>
+
+        </RelativeLayout>
+
+        <VideoView
+            android:id="@+id/imv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rell"
+            android:layout_centerInParent="true"
+            android:src="@drawable/avtaar"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

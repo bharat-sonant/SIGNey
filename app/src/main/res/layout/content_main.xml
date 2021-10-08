@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DashboardActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".DashboardActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/dash"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@color/colorPrimaryDark">
+
+
+                    <TextView
+                        android:id="@+id/temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Welcome!"
+                        android:textColor="@android:color/white"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/temp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:visibility="gone"
+                        android:id="@+id/profile_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/username"
+                        android:src="@drawable/profile" />
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/temp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/username"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:id="@+id/temp4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_toLeftOf="@+id/level"
+                            android:layout_weight="25"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Level"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/level"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_toLeftOf="@+id/midline"
+                            android:background="@drawable/dashboardpointsbg"
+                            android:fontFamily="@font/jura_medium"
+                            android:gravity="center"
+                            android:text="6"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="30sp" />
+
+                        <ImageView
+                            android:id="@+id/midline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/middleline"></ImageView>
+
+                        <TextView
+                            android:id="@+id/temp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/midline"
+                            android:layout_weight="25"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Points"
+                            android:textColor="@android:color/white"
+
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/points"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/temp5"
+                            android:background="@drawable/dashboardpointsbg"
+                            android:fontFamily="@font/jura_medium"
+                            android:gravity="center"
+                            android:text="86"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/profile"
+                            android:gravity="center"
+                            android:onClick="pointinformation"
+                            android:text="i"
+                            android:textColor="@android:color/white"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:visibility="gone"
+
+                        android:id="@+id/temp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/temp2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Average time spent in a day"
+                        android:textColor="#5BD3C7"
+                        android:textSize="18dp"></TextView>
+
+                    <TextView
+                        android:visibility="gone"
+
+                        android:id="@+id/average_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/temp3"
+
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="60dp"
+                        android:fontFamily="@font/jura_medium"
+                        android:text="0 Hrs : 47 mins"
+                        android:textColor="#5BD3C7"
+                        android:textSize="18dp"
+                        android:textStyle="bold"></TextView>
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:visibility="gone"
+
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/dash"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="-23dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/stats" />
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+
+                    android:id="@+id/relaout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dash"
+                    android:layout_marginTop="12dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/challenges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tmmm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Challenges and Rewards"
+                            android:textColor="#292929"
+                            android:textSize="20sp"></TextView>
+
+                        <View
+                            android:id="@+id/line_35w"
+                            android:layout_width="120dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/tmmm"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="-1dp"
+                            android:background="@drawable/line_350" />
+
+                        <ImageView
+                            android:id="@+id/arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="21dp"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp"></ImageView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pointslayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_below="@+id/challenges"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/rewards1"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/dashboard_rewards1" />
+
+                                <TextView
+                                    android:id="@+id/rewards_text1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rewards1"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="5 Hours"
+                                    android:textColor="#292929"
+
+                                    android:textSize="14sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_points1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_above="@+id/rewards_text1"
+                                    android:layout_marginLeft="-20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_toRightOf="@+id/rewards1"
+                                    android:background="@drawable/pointsbg"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="+20"
+                                    android:textColor="#353755"
+                                    android:textSize="10dp"></TextView>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+
+                                    android:id="@+id/rewards2"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/dashboard_rewards2" />
+
+                                <TextView
+                                    android:id="@+id/rewards_text2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rewards2"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="5 Days"
+                                    android:textColor="#292929"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/rewards_points2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_above="@+id/rewards_text2"
+                                    android:layout_marginLeft="-20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_toRightOf="@+id/rewards2"
+                                    android:background="@drawable/pointsbg"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="+20"
+                                    android:textColor="#353755"
+                                    android:textSize="10dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/rewards3"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/dashboard_rewards3" />
+
+                                <TextView
+                                    android:id="@+id/rewards_text3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rewards3"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:maxWidth="50dp"
+
+                                    android:text="5 Hours Per Day"
+                                    android:textColor="#292929"
+                                    android:textSize="14sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_points3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_above="@+id/rewards_text3"
+                                    android:layout_marginLeft="-20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_toRightOf="@+id/rewards3"
+                                    android:background="@drawable/pointsbg"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="+20"
+                                    android:textColor="#353755"
+                                    android:textSize="10dp"></TextView>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/rewards4"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/dashboard_rewards4" />
+
+                                <TextView
+                                    android:id="@+id/rewards_text4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rewards4"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+
+                                    android:text="5 Hours"
+                                    android:textColor="#292929"
+                                    android:textSize="14sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_points4"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_above="@+id/rewards_text4"
+                                    android:layout_marginLeft="-20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_toRightOf="@+id/rewards4"
+                                    android:background="@drawable/pointsbg"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="+20"
+                                    android:textColor="#353755"
+                                    android:textSize="10dp"></TextView>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pointslayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/challenges"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#000000ff"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="160dp"
+                                android:layout_height="200dp"
+
+                                android:background="@drawable/pointscard">
+
+                                <ImageView
+                                    android:id="@+id/rewards11"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/expandedpoints1" />
+
+                                <TextView
+                                    android:id="@+id/rewards_text11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rewards11"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="-10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="5 Hours
+                                 Challenge"
+                                    android:textColor="#292929"
+                                    android:textSize="16sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_text_content11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rewards_text11"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="Read for 5 hours continuously"
+                                    android:textAlignment="center"
+                                    android:textColor="#353755"
+                                    android:textSize="14sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_points11"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/pointsbg"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="+20"
+                                    android:textColor="#353755"
+                                    android:textSize="10dp"></TextView>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="160dp"
+                                android:layout_height="200dp"
+                                android:background="@drawable/pointscard">
+
+                                <ImageView
+                                    android:id="@+id/rewards12"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/expandedpoints2" />
+
+                                <TextView
+                                    android:id="@+id/rewards1_text2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rewards12"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="-10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="5 Days
+                                 Challenge"
+                                    android:textAlignment="center"
+                                    android:textColor="#292929"
+                                    android:textSize="16sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards1_points2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/pointsbg"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="+20"
+                                    android:textColor="#353755"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_text_content21"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rewards1_text2"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="Read for 5 Days continously "
+                                    android:textAlignment="center"
+                                    android:textColor="#353755"
+                                    android:textSize="14sp"></TextView>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pointslayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/pointslayout2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="160dp"
+                                android:layout_height="200dp"
+                                android:background="@drawable/pointscard">
+
+                                <ImageView
+                                    android:id="@+id/rewards31"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/expandedpoints3" />
+
+                                <TextView
+                                    android:id="@+id/rewards_text31"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rewards31"
+                                    android:layout_centerHorizontal="true"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="15 Hours/week
+                                 Challenge"
+                                    android:textAlignment="center"
+                                    android:textColor="#292929"
+                                    android:textSize="14sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_text_content31"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rewards_text31"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="Read for 15 hours
+                                 in a week "
+                                    android:textAlignment="center"
+                                    android:textColor="#353755"
+                                    android:textSize="14sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_points31"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/pointsbg"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="+20"
+
+                                    android:textColor="#353755"
+                                    android:textSize="10dp"></TextView>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+
+                                android:layout_width="160dp"
+                                android:layout_height="200dp"
+                                android:background="@drawable/pointscard">
+
+                                <ImageView
+                                    android:id="@+id/rewards22"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/expandedpoints2" />
+
+                                <TextView
+                                    android:id="@+id/rewards2_text2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rewards22"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="-10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="5 Days
+                                 Challenge"
+                                    android:textColor="#292929"
+                                    android:textSize="16sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards2_points2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/pointsbg"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="+20"
+                                    android:textColor="#353755"
+                                    android:textSize="10dp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/rewards_text_content41"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rewards2_text2"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="Read for 5 Days continously "
+                                    android:textAlignment="center"
+                                    android:textColor="#353755"
+                                    android:textSize="14sp"></TextView>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+
+                    android:id="@+id/lay_recycler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@id/relaout">
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Continue Reading"
+                        android:textColor="#292929"
+                        android:textSize="20dp" />
+
+                    <View
+                        android:id="@+id/line_351"
+                        android:layout_width="120dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/text2"
+                        android:layout_marginLeft="15dp"
+
+                        android:background="@drawable/line_350" />
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_351"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="horizontal" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/start"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lay_recycler"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/dashboard_buttonbg"
+                    android:fontFamily="@font/montserrat"
+                    android:onClick="sselection"
+                    android:paddingLeft="30dp"
+                    android:text="Library"
+                    android:textColor="#FFFFFF" />
+
+                <ImageView
+
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/lay_recycler"
+                    android:layout_marginTop="165dp"
+                    android:layout_marginRight="-50dp"
+                    android:layout_toLeftOf="@id/start"
+                    android:src="@drawable/library">
+
+                </ImageView>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

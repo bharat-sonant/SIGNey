@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../.gradle/caches/transforms-2/files-2.1/776277604e6a8ae646ba5125630ecf53/jetified-pspdfkit-7.0.0/res/layout/pspdf__action_menu_layout.xml" value="0.12881944444444443" />
+        <entry key="../../../.gradle/caches/transforms-2/files-2.1/776277604e6a8ae646ba5125630ecf53/jetified-pspdfkit-7.0.0/res/layout/pspdf__pdf_activity.xml" value="0.12430555555555556" />
+        <entry key="../../Android/Sdk/platforms/android-29/data/res/layout/select_dialog_item.xml" value="0.1712962962962963" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/drawable/notifciationvector.xml" value="0.192578125" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/activity_anim_to_unity.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/activity_dashboard.xml" value="0.18046875" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/activity_data_encryption.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/activity_get_data_in_to_recycler_view_from_firebase.xml" value="0.23645833333333333" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/activity_google_sign_in.xml" value="0.115625" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/activity_testing.xml" value="0.1" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/custom_viewpager_item.xml" value="0.17734375" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/customview.xml" value="0.2" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/layout/item.xml" value="0.2" />
+        <entry key="..\:/Android Studio Projects/sonant master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/drawable/gradient_spinner1.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.13958333333333334" />
+        <entry key="app/src/main/res/drawable/imageanthembtn.xml" value="0.13958333333333334" />
+        <entry key="app/src/main/res/layout/activity_available_books.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.12881944444444443" />
+        <entry key="app/src/main/res/layout/activity_demo_slider.xml" value="0.19025641025641027" />
+        <entry key="app/src/main/res/layout/activity_editable_pdf.xml" value="0.12881944444444443" />
+        <entry key="app/src/main/res/layout/activity_google_sign_in.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_national_anthem.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_pdf_display_new_m.xml" value="0.17" />
+        <entry key="app/src/main/res/layout/activity_pdf_reader.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_pdfdisplay.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_player.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_signin_activityy.xml" value="0.17592592592592593" />
+        <entry key="app/src/main/res/layout/activity_signup_second.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_splashplayer.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_subject_display.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_subject_internal.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_testing.xml" value="0.1274914089347079" />
+        <entry key="app/src/main/res/layout/activity_testing_activitythree.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_testing_two.xml" value="0.12881944444444443" />
+        <entry key="app/src/main/res/layout/activity_unity_handler.xml" value="0.12881944444444443" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.19025641025641027" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/content_profile.xml" value="0.18703703703703703" />
+        <entry key="app/src/main/res/layout/list_group.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/spinner.xml" value="0.12881944444444443" />
+        <entry key="app/src/main/res/layout/subject_heading.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/subject_list.xml" value="0.17" />
+        <entry key="app/src/main/res/layout/subject_list_dashboard.xml" value="0.19025641025641027" />
+        <entry key="app/src/main/res/layout/subject_subheading.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/menu/activity_subjects_drawer.xml" value="0.1274914089347079" />
+        <entry key="app/src/main/res/menu/custom_menu_toolbar_items.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/home_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/pdfitem.xml" value="0.12881944444444443" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13958333333333334" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.13958333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
